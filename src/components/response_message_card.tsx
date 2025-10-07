@@ -3,11 +3,10 @@ import React from 'react'
 import { s, vs } from 'react-native-size-matters'
 import { colors } from '../styles/colors'
 
-interface SentMessageCardProps {
+interface ResponseMessageCardProps {
     message: string
 }
-
-const SentMessageCard: React.FC<SentMessageCardProps> = ({message}) => {
+const ResponseMessageCard: React.FC<ResponseMessageCardProps> = ({message}) => {
   return (
     <View style={styles.container}>
       <View style={styles.messageContainer}>
@@ -17,17 +16,16 @@ const SentMessageCard: React.FC<SentMessageCardProps> = ({message}) => {
   )
 }
 
-export default SentMessageCard
+export default ResponseMessageCard
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        marginVertical: vs(4),
-        paddingHorizontal: s(6)
+        marginVertical: s(4),
+        marginHorizontal: s(8),
+        paddingBottom: vs(12),
     },
     messageContainer: {
-        backgroundColor: colors.black,
+        backgroundColor: colors.mediumGrey,
         borderRadius: s(20),
         maxWidth: '80%',
         padding: s(12)
